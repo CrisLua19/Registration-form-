@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Registration Form</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h1>Registration Form</h1>
+
+    <form id="registrationForm" class="space-y-4" novalidate>
+      <!-- Name Fields -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="required" for="firstName">First Name</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+            class="input-field"
+            placeholder="First name"
+          />
+        </div>
+        <div>
+          <label for="middleName">Middle Name</label>
+          <input
+            type="text"
+            id="middleName"
+            name="middleName"
+            class="input-field"
+            placeholder="Middle name"
+          />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="required" for="lastName">Last Name</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+            class="input-field"
+            placeholder="Last name"
+          />
+        </div>
+        <div>
+          <label for="suffix">Suffix</label>
+          <select id="suffix" name="suffix" class="input-field">
+            <option value="">Select suffix</option>
+            <option value="Jr.">Jr.</option>
+            <option value="Sr.">Sr.</option>
+            <option value="II">II</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <label class="required" for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="input-field"
+          placeholder="email@example.com"
+        />
+      </div>
+
+      <div>
+        <label class="required" for="contact">Contact Number</label>
+        <input
+          type="tel"
+          id="contact"
+          name="contact"
+          required
+          class="input-field"
+          placeholder="+63 912 345 6789"
+        />
+      </div>
+
+      <!-- Professional Info -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="required" for="batch">Batch</label>
+          <input
+            type="text"
+            id="batch"
+            name="batch"
+            required
+            class="input-field"
+            placeholder="e.g., 2023-A"
+          />
+        </div>
+        <div>
+          <label class="required" for="idNo">ID Number</label>
+          <input
+            type="text"
+            id="idNo"
+            name="idNo"
+            required
+            class="input-field"
+            placeholder="ID number"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label class="required" for="technology">Technology</label>
+        <select
+          id="technology"
+          name="technology"
+          required
+          class="input-field"
+        >
+          <option value="">Select technology</option>
+          <option value="Electrical Engineering Technology">
+            Electrical Engineering Technology
+          </option>
+          <option value="Computer Engineering Technology">
+            Computer Engineering Technology
+          </option>
+          <option value="Mechanical Engineering Technology">
+            Mechanical Engineering Technology
+          </option>
+          <option value="Electronic Engineering Technology">
+            Electronic Engineering Technology
+          </option>
+        </select>
+      </div>
+
+      <!-- Form Actions -->
+      <div class="flex gap-3 pt-4">
+        <button type="reset" class="button">Clear</button>
+        <button type="submit" class="button">Register</button>
+      </div>
+    </form>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="mt-4 p-4 rounded-md border hidden success">
+      <div class="text-center">
+        <p class="text-green-700 font-medium">Registration successful!</p>
+        <div id="submittedData" class="mt-2 text-left"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/java/main.js"></script>
+</body>
+</html>
